@@ -8,7 +8,7 @@
 const testPhoneNumber = (phoneNumber) => {
     const myRegEx = /^\(?(\d{3})\)?[- ]?(\d{3})[- ]?(\d{4})$/
     const result = myRegEx.test(phoneNumber)
-    return result ?  true : false;
+    return result ?  true : `${false}, missing a digit` ;
 }
 
 // Explanation of RegExp
@@ -36,9 +36,9 @@ console.log(testPhoneNumber('(206) 33-4444')); // should return false, missing a
 
 const parsePhoneNumber = (phone) => {
     const myRegEx = /^\(?(\d{3})\)?[- ]?(\d{3})[- ]?(\d{4})$/
-    const phoneObject = myRegEx.exec(phone)
-    const phonePrefix = phoneObject[1]
-    const phoneSuffix = phoneObject[2] + phoneObject[3]
+    const phoneArr = myRegEx.exec(phone)
+    const phonePrefix = phoneArr[1]
+    const phoneSuffix = phoneArr[2] + phoneArr[3]
     
     return {
         areaCode: phonePrefix,

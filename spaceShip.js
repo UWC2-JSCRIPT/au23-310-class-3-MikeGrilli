@@ -12,7 +12,7 @@ class SpaceShip {
     }
     accelerate() {
         const { name, topSpeed } = this
-        console.log(this)
+        // console.log(this)
         console.log(`${name} has a top speed of ${topSpeed} miles per hour.`)
     }
     combat() {
@@ -46,18 +46,5 @@ const attackShipTwo = (spaceShipOne, SpaceShipTwo) => {
 
 attackShipTwo(ship1,ship2)
 
-// console.log(ship1)
-// console.log(ship2)
 
-// Random attacking program
-const whoWins = (a,b) => {
-    const order = Math.floor(Math.random() * 2)
-    console.log(order)
-    if( order === 0) {
-        console.log(`${a.name} hit ${b.name} for ${a.attackDamage}`)
-    } else {
-        console.log(`${b.name} hit ${a.name} for ${b.attackDamage}`)
-    }
-} 
 
-whoWins(ship1,ship2)
