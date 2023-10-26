@@ -32,6 +32,7 @@ const attack = (attackingPlayer, defendingPlayer, baseDamage, variableDamage) =>
     return `${attackingPlayer.name} hits ${defendingPlayer.name} for ${totalDamage}. ${defendingPlayer.health} health remaining`
   }
   
+  
 
 // DO NOT MODIFY THE CODE BELOW THIS LINE
 // Set attacker and defender.  Reverse roles each iteration

@@ -44,9 +44,7 @@ const parsePhoneNumber = (phone) => {
         areaCode: phonePrefix,
         phoneNumber: phoneSuffix
     }
-  
 }
-
 
 
 // Check parsePhoneNumber
