@@ -6,19 +6,19 @@ class SpaceShip {
     constructor(name , topSpeed, weaponType, attackDamage, health) {
         this.name = name
         this.topSpeed = topSpeed
-        // this.weaponType = weaponType
-        // this.attackDamage = attackDamage
-        // this.health = health
+        this.weaponType = weaponType
+        this.attackDamage = attackDamage
+        this.health = health
     }
     accelerate() {
         const { name, topSpeed } = this
-        // console.log(this)
+        console.log(this)
         console.log(`${name} has a top speed of ${topSpeed} miles per hour.`)
     }
-    // combat() {
-    //     const { name, weaponType, attackDamage, health } = this
-    //     console.log(`${name} uses ${weaponType}, which do ${attackDamage} damage. The ships total health is ${health}.`)
-    // }
+    combat() {
+        const { name, weaponType, attackDamage, health } = this
+        console.log(`${name} uses ${weaponType}, which do ${attackDamage} damage. The ships total health is ${health}.`)
+    }
 }
 
 // 2. Call the constructor with a couple ships, 
@@ -35,28 +35,29 @@ ship2.accelerate()
 
 
 
-// Attacking programs
-// const attackShipTwo = (spaceShipOne, SpaceShipTwo) => {
-//     const firstStrike = spaceShipOne.attackDamage
-//     const targetedShip = spaceShipOne.health
-//     const totalHealthRemaining =  targetedShip - firstStrike
-//     SpaceShipTwo.health = totalHealthRemaining
-//     console.log(`${spaceShipOne.name} hit the ${SpaceShipTwo.name} for ${firstStrike}. ${SpaceShipTwo.name} has ${SpaceShipTwo.health} health remaining`)
-// }
+// Attacking program
+const attackShipTwo = (spaceShipOne, SpaceShipTwo) => {
+    const firstStrike = spaceShipOne.attackDamage
+    const targetedShip = spaceShipOne.health
+    const totalHealthRemaining =  targetedShip - firstStrike
+    SpaceShipTwo.health = totalHealthRemaining
+    console.log(`${spaceShipOne.name} hit the ${SpaceShipTwo.name} for ${firstStrike}. ${SpaceShipTwo.name} has ${SpaceShipTwo.health} health remaining`)
+}
 
-// attackShipTwo(ship1,ship2)
+attackShipTwo(ship1,ship2)
 
 // console.log(ship1)
 // console.log(ship2)
 
-// const whoWins = (a,b) => {
-//     const order = Math.floor(Math.random() * 2)
-//     console.log(order)
-//     if( order === 0) {
-//         console.log(`${a.name} hit ${b.name} for ${a.attackDamage}`)
-//     } else {
-//         console.log(`${b.name} hit ${a.name} for ${b.attackDamage}`)
-//     }
-// } 
+// Random attacking program
+const whoWins = (a,b) => {
+    const order = Math.floor(Math.random() * 2)
+    console.log(order)
+    if( order === 0) {
+        console.log(`${a.name} hit ${b.name} for ${a.attackDamage}`)
+    } else {
+        console.log(`${b.name} hit ${a.name} for ${b.attackDamage}`)
+    }
+} 
 
-// whoWins(ship1,ship2)
+whoWins(ship1,ship2)
