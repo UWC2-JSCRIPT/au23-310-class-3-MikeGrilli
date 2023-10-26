@@ -26,10 +26,9 @@ const player2 = {
 // 3. Refactor attack function to an arrow function.  Comment out function above.
 const attack = (attackingPlayer, defendingPlayer, baseDamage, variableDamage) => {
     const randomDamage = Math.floor(Math.random() * (variableDamage + 1))
-    console.log(randomDamage)
     const totalDamage = baseDamage + randomDamage
     defendingPlayer.health -= totalDamage
-    return `${attackingPlayer.name} hits ${defendingPlayer.name} for ${totalDamage}. ${defendingPlayer.health} health remaining`
+    return `${attackingPlayer.name} hits ${defendingPlayer.name} for ${totalDamage}! (${defendingPlayer.health} health remaining)`
   }
   
   
