@@ -30,8 +30,8 @@ const ship2 = new SpaceShip('Pineapple Express', 1300, 'Plasma Cannons', 10, 100
 ship1.accelerate()
 ship2.accelerate()
 
-// ship1.combat()
-// ship2.combat()
+ship1.combat()
+ship2.combat()
 
 
 
